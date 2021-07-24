@@ -3,22 +3,16 @@
   "version": "0.1.0",
   "description": "React Calendar App.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/arakilian0/calendar.git"
+    "start": "nodemon server.js"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/arakilian0/calendar/issues"
-  },
-  "homepage": "https://github.com/arakilian0/calendar#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "joi": "^17.4.1",
-    "mongoose": "^5.13.3"
+    "mongoose": "^5.13.3",
+    "nodemon": "^2.0.12"
   }
 }
