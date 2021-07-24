@@ -7,3 +7,4 @@ build
 
 client/node_modules/
 client/package-lock*
+client/yarn.lock
