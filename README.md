@@ -2,6 +2,12 @@
 
 React Calendar App.
 
+# Use
+Run the following command 2 times. Once in the root directory, then again in the client directory.
+```
+npm install && npm start
+```
+
 # License
 MIT License
 
