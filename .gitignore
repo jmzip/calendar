@@ -1,9 +1,9 @@
-.vscode
+.vscode/
 
 node_modules/
 package-lock*
 
-build
+build/
 
 client/node_modules/
 client/package-lock*
