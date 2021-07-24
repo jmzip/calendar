@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/arakilian0/calendar/issues"
   },
-  "homepage": "https://github.com/arakilian0/calendar#readme"
+  "homepage": "https://github.com/arakilian0/calendar#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
