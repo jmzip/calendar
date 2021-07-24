@@ -1,3 +1,9 @@
 .vscode
+
 node_modules/
 package-lock*
+
+build
+
+client/node_modules/
+client/package-lock*
