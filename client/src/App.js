@@ -1,38 +1,63 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react"
 
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
 
-function App() {
-  const [data, setData] = React.useState(null);
+import "./App.css"
+
+import Header from './components/Header/Header'
+import Login from './components/Authentication/Login'
+
+function Home() {
+  return <h2>Home</h2>
+}
+
+function About() {
+  return <Login />
+}
+
+function Users() {
+  return <h2>Users</h2>
+}
+
+export default function App() {
+  const [data, setData] = React.useState(null)
 
   React.useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+      .then((data) => setData(data.message))
+  }, [])
 
   return (
-    <div className="App">
-      <Navbar bg="dark" variant="dark">
-        <Container>
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        </Container>
-      </Navbar>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-    </div>
-  );
-}
+    <Router>
+      <div>
 
-export default App;
+        <Header /> 
+
+        <Switch>
+          <Route path="/about">
+            <div>
+              <About />
+            </div>
+          </Route>
+          <Route path="/users">
+            <div>
+              <Users />
+              <p>{!data ? "Loading..." : data}</p>
+            </div>
+          </Route>
+          <Route path="/">
+            <div>
+              <Home />
+              <p>{!data ? "Loading..." : data}</p>
+            </div>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  )
+}
