@@ -21,6 +21,7 @@ import LogoutRoute from './routes/Logout'
 import SignupRoute from './routes/Landing/Signup'
 import TermsRoute from './routes/Policy/Terms'
 import PrivacyRoute from './routes/Policy/Privacy'
+import AppRoute from './routes/App'
 
 // Firebase
 import firebase from 'firebase'
@@ -49,7 +50,8 @@ class App extends Component {
             <Route path='/privacy' component={ PrivacyRoute } />
             <Route path='/signup' component={ SignupRoute } />
             <Route path='/login' component={ LoginRoute } />
-            <Route path='/logout' component={ LogoutRoute }></Route>
+            <Route path='/logout' component={ LogoutRoute } />
+            <Route path='/app' component={ AppRoute } />
             <Route path='/' component={ HomeRoute } />
             {/* END Routes */}
           </Switch>
